@@ -1,7 +1,10 @@
 import { css, injectGlobal } from '@emotion/css';
+import Footer from './Footer';
+// import {  } from '@emotion/react';
 import Header from './Header';
+import Product from './Product';
 
-injectGlobal`
+injectGlobal `
 *,
           *::before,
           *::after {
@@ -32,7 +35,7 @@ injectGlobal`
           }
 
           h3{
-            font-size: 24px;
+            font-size: 26px;
             font-weight: 500;
 
           }
@@ -54,6 +57,7 @@ const banner = css`
 
 const bannerStyles = css`
   width: 100%;
+  padding-top: 40px;
   position: absolute;
   top: 120px;
   left:0;
@@ -105,9 +109,14 @@ const ourBestStyles = css`
   `;
 
 
-
-
 function App() {
+
+  const products = [
+    {id:1, name: 'Solimo Coffee Beans 2 kg', price: '10.73$', img: '/solimo.png'},
+    {id:2, name: 'Presto Coffee Beans 1 kg', price: '15.99$', img: '/presto.png'},
+    {id:3, name: 'AROMISTICO Coffee 1 kg', price: '6.99$', img: '/aromistico.png'}
+  ]
+
   return (
     <>
       <div className="App">
@@ -145,10 +154,11 @@ function App() {
           </div>
 
           <div className={ourBestStyles}>
-            {/*<img  alt='paper background' src='/paper.png'/> */}
             <h3>Our Best</h3>
+            <a href='/'><Product products={products}/></a>
           </div>
         </main>
+        <Footer/>
       </div>
     </>
   );

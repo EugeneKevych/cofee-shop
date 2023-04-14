@@ -24,11 +24,11 @@ export default function Header() {
   return (
     <header className={headerStyles}>
 
-        <img alt="logo_coffeeBeans" src="/logo_beans.png  " />
-        <a href="/">Coffee house</a>
+      <a href="/"><img alt="logo_coffeeBeans" src="/logoWhite.png  " />Coffee house</a>
 
-        <a href="/">Our coffee</a>
-        <a href="/">For your pleasure</a>
+
+      <a href="/">Our coffee</a>
+      <a href="/">For your pleasure</a>
 
     </header>
   );
